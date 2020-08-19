@@ -73,13 +73,27 @@ a {
 .update-button {
   position: absolute;
   top: 25px;
-  right: 125px;
+  right: 180px;
   border: 1px solid grey;
   padding: 5px 10px;
-  background-color: grey;
+  background-color: darkgray;
   cursor: pointer;
 }
 .update-button:hover {
+  background-color: grey;
+  color: white;
+}
+
+.delete-button {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+.delete-button:hover {
   background-color: red;
   color: white;
 }

@@ -4,6 +4,7 @@ import SavedList from "./Movies/SavedList";
 import MovieList from "./Movies/MovieList";
 import Movie from "./Movies/Movie";
 import UpdateMovie from "./Movies/UpdateMovie";
+import AddMovie from "./Movies/AddMovie";
 import axios from "axios";
 
 const App = () => {
@@ -32,7 +33,13 @@ const App = () => {
       <SavedList list={savedList} />
       <Switch>
         <Route path="/movies/:id">
-          <Movie addToSavedList={addToSavedList} />
+          <Movie
+            addToSavedList={addToSavedList}
+            shouldUpdate={() => setShouldUpdate(true)}
+          />
+        </Route>
+        <Route path="/add">
+          <AddMovie shouldUpdate={() => setShouldUpdate(true)} />
         </Route>
         <Route path="/update-movie/:id">
           <UpdateMovie
